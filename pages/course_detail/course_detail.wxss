@@ -1,0 +1,108 @@
+/* pages/course_detail/course_detail.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+page{
+  overflow-y: hidden;
+}
+.page-body{
+  width: 100%;
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result .weui-cell__bd{
+  padding: 2px 0 2px 20px;
+  color: #666;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.3em;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.weui-media-box__desc {
+  color: #666;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.tc{
+  text-align: center;
+}
+
+.swiper-tab{
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.swiper-tab-item{
+  width: 30%; 
+  color:#000;
+}
+.active{
+  color:#3CB371;
+  border-bottom: 4rpx solid #3CB371;
+}
+swiper{
+ text-align: left;
+}
+.detail_btn{
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.detail_btn button::after{
+  border-radius: 0;
+}
+.detail_btn button{
+  border-radius: 0;
+}
+.detail_submit_other_btn{
+  color: #3CB371;
+  background-color: #fafafa;
+}
+.detail_submit_btn{
+  color: #fff;
+  background-color: #3CB371;
+}
+.button-hover{
+  color: #fff;
+  background-color: #cfcece;
+}
+video{
+  width: 100%;
+  height: 240px;
+}
+.weui-flex button{
+  font-size: 1.125rem;
+}
+.fs20{
+  font-size: 1.125rem;
+  color: #333;
+}
+.p10{
+  padding: 10px;
+}
+.price{
+  color:#3CB371;
+  float: right;
+  font-size: 1.125rem;
+  margin-top:-25px;
+}

@@ -1,0 +1,17 @@
+/* pages/manage/manage.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+page{
+  overflow-y: hidden;
+}
+
+.weui-grid__label {
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  color: #333;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

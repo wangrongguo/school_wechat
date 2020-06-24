@@ -1,0 +1,41 @@
+<!--pages/course_search/course_search.wxml-->
+<!--pages/news_list/news_list.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<!--顶部搜索框-->
+<view class="page">
+  <view class="">
+    <mp-searchbar focus='{{true}}' bindselectresult="selectResult" bindblur="bindinput"></mp-searchbar>
+  </view>
+</view>
+
+
+ <!--热门-->
+    <view wx:if="{{course_items.length > 0}}" class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd r_font-size">{{search_value}}</view>
+      <view class="weui-panel__bd">
+        <block wx:for="{{course_items}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <navigator url="../course_detail/course_detail?course_id={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.cover.full_url}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.name}}</view>
+              <view class="weui-media-box__desc">{{item.teacher.name}}</view>
+              <view class="weui-media-box__desc">{{item.popularity}}人气</view>
+              <view class="weui-media-box__desc baoming_view">
+                <view class='baoming_btn'>￥{{item.price}}</view>
+              </view>
+              
+            </view>
+          </navigator>
+        </block>
+      </view>
+      
+    </view>
+
+    <view  class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>

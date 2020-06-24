@@ -1,0 +1,10 @@
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.detail_submit_btn{
+  color: #fff;
+  background-color: #33a3dc;
+}
+.button-hover{
+  color: #fff;
+  background-color: #cfcece;
+}

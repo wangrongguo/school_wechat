@@ -1,0 +1,28 @@
+/* pages/idcard/idcard.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.idcard_tip{
+  color: #666666;
+  margin: 20px 0 15px 0;
+
+}
+.idcard_bd{
+  margin: 0px 10%;
+}
+.idcard_img{
+  height: 200px;
+  width: 100%;
+  border:1rpx solid #d9d9d9;
+
+}
+.idcard_img_down{
+  margin-top: 20px;
+}
+.submit_btn{
+  height: 45px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #33a3dc;
+  border-radius: 0;
+
+}

@@ -1,0 +1,22 @@
+<template name="inspect_list_template">
+  <navigator wx:for="{{inspectListData}}" wx:for-index="index" wx:for-item="item" wx:key="index" url='../inspect_detail/inspect_detail?inspect_detail_id={{item.sItemId}}&agent_ip={{item.sAgentIp}}' class="weui-panel" hover-class="hover_class_click">
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+        <view class="weui-media-box__title weui-media-box__title_in-text display_f">
+          <view>{{item.sAgentIp}}</view>
+          <view class="inspect_btn_right">
+            <!-- 判断告警级别-->
+            <view wx:if="{{item.iCountTh > 0}}" class="btn-serious inspect_btn">严重</view>
+            <view wx:elif="{{item.iCountT > 0}}" class="btn-main inspect_btn">主要</view>
+            <view wx:else="{{item.iCountO > 0}}" class="btn-secondary inspect_btn">次要</view>
+          </view>
+        </view>
+        <view class="weui-media-box__desc">{{item.sAgentName}}</view>
+        <view class="weui-media-box__desc mt_5">{{item.sTemplate}}</view>
+        <view class="weui-media-box__info f_right">
+          <view class="weui-media-box__info__meta">{{item.dCreateTime}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>

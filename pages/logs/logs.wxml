@@ -1,0 +1,7 @@
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}"/>
+<image style="width:100%;" src='../../images/banner.jpg'></image>
+<!-- 需要使用 button 来授权登录 -->
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="detail_submit_btn" style='margin:5px 10px;'>授权登录</button>
+<view wx:else>请升级微信版本</view>

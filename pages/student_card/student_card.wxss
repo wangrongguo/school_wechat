@@ -1,0 +1,98 @@
+/* pages/student_card/student_card.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+page{
+  background-color: #33a3dc;
+  color: #fff;
+}
+
+.weui-media-box_appmsg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: block;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: #33a3dc;
+  text-align: center;
+}
+
+.weui-media-box:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 0rpx solid #e5e5e5;
+  color: #e5e5e5;
+  left: 15px;
+}
+
+.weui-media-box__desc {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 10px 0px;
+}
+
+.weui-media-box__hd_in-appmsg {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.weui-media-box__title {
+  font-weight: 400;
+  font-size: 25px;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 1rem;
+}
+
+
+.weui-loadmore_line {
+  border-bottom: 0px solid #fff;
+  margin-top: 2.4em;
+}
+
+.kecheng{
+  font-size: 0.8125rem;
+  color:#fff;
+  border-bottom: 1px solid #fff;
+  margin: 0px 2rem;
+}
+.weui-loadmore__tips_in-line {
+  position: relative;
+  top: -.9em;
+  padding: 0 0.55em;
+  background-color: #33a3dc;
+  color: #fff;
+}
+.kc_text{
+  color: #fff;
+}
+.r_title{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.img_logo{
+  width: 20px;
+  height: 20px;
+  margin:0.08rem 0.5rem 0.08rem 0rem;
+}
+.r_logo{
+  text-align: center;
+}

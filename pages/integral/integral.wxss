@@ -1,0 +1,6 @@
+/* pages/integral/integral.wxss */
+
+.integral_title {
+  text-align: center;
+  font-size: 30px;
+}

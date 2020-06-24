@@ -1,0 +1,29 @@
+/* pages/msg/msg.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+
+page {
+  background-color: #fff;
+}
+
+page, .page {
+  height: 100%;
+}
+page{
+  overflow-y: hidden;
+}
+.detail_submit_btn {
+  margin-top: -100px;
+  width: 50%;
+  color: #fff;
+  background-color: #33a3dc;
+}
+
+.button-hover {
+  width: 50%;
+  color: #fff;
+  background-color: #cfcece;
+}
+.mt-100{
+  margin-top: -150px;
+}

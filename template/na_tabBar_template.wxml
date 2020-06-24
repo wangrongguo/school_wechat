@@ -1,0 +1,4 @@
+<!--顶部导航-->
+<template name="na_tabBar_template">
+<mp-navigation-bar loading="{{na_tabbar.na_loading}}" show="{{na_tabbar.na_show}}" animated="{{na_tabbar.na_animated}}" color="#fff" background="{{na_tabbar.na_backcolor}}" title="{{na_tabbar.na_text}}" back="{{na_tabbar.na_back}}"></mp-navigation-bar>
+</template>

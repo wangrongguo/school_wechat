@@ -1,0 +1,36 @@
+/* pages/course_comment/course_comment.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.detail_submit_btn{
+  color: #fff;
+  background-color: #33a3dc;
+  margin:0px 20px;
+}
+.button-hover{
+  color: #fff;
+  background-color: #cfcece;
+}
+.r_view{
+  margin: 20rpx 40rpx;
+}
+.r_textarea{
+  padding: 20rpx 10rpx;
+  width: 100%;
+  border: 1rpx solid #e5e5e5;
+}
+.foot_view{
+  font-size: 13px;
+  color: red;
+  padding: 20rpx 40rpx;
+}
+
+
+image{
+  height: 60rpx;
+  width: 60rpx;
+  display: inline-block
+}
+.r_input{
+  float: left;
+  width: 20px;
+}

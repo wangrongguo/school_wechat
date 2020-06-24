@@ -1,0 +1,62 @@
+/* pages/course_list/course_list.wxss 课程单列表*/
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.weui-panel {
+  background-color: #fff;
+  margin-top: 0px;
+  position: relative;
+  overflow: hidden;
+}
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.935em;
+  width: 150px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.weui-media-box__desc {
+  color: #666;
+  font-size: 0.8125rem;
+  line-height: 2.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.baoming_view{
+  float: right;
+  margin-top: -55px;
+}
+.baoming_btn{
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+  padding: 0px;
+  line-height: 25px;
+  color: #33a3dc;
+  text-align: right;
+}
+.s_btn{
+  height: 90px;
+  background: #33a3dc;
+  border-radius:0px; 
+}
+
+.weui-media-box__title {
+  font-size: 0.93555rem;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #333
+}
+
+.weui-media-box {
+  padding: 8px 15px;
+  position: relative;
+}

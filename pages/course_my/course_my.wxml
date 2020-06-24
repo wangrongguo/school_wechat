@@ -1,0 +1,32 @@
+<!--pages/course_list/course_list.wxml课程单列表-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<!--课程列表-->
+<view wx:if="{{course_items.length > 0}}" class="weui-panel weui-panel_access">
+  <view class="weui-panel__bd">
+    <block wx:for="{{course_items}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <navigator  url="{{navigator_url}}{{is_show == 3 ? item.id : item.course.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb" src="{{item.course.cover.full_url}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{item.course.name}}</view>
+          <view class="weui-media-box__desc">￥{{item.payment}}</view>
+          <view class="weui-media-box__desc">购于{{item.created}}</view>
+          <view class="weui-media-box__desc baoming_view">
+            <mp-icon type="outline" icon="arrow" color="#666" size="{{13}}"></mp-icon>
+          </view>
+        </view>
+      </navigator>
+    </block>
+
+
+  </view>
+
+</view>
+
+<view wx:else class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>

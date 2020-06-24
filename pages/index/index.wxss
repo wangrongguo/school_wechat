@@ -1,0 +1,84 @@
+/**index.wxss引入weui初始化，app全局样式**/
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+
+page {
+  background: #fff;
+}
+
+.page-body {
+  width: 100%;
+  padding: 0rpx;
+}
+
+.searchbar-result {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.searchbar-result .weui-cell__bd {
+  padding: 2px 0 2px 20px;
+  color: #666;
+}
+
+.searchbar-result:before {
+  display: none;
+}
+
+.weui-media-box__hd_in-appmsg {
+  margin-right: 0.935em;
+  width: 150px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+}
+
+.weui-media-box__desc {
+  color: #666;
+  font-size: 0.8125rem;
+  line-height: 2.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.baoming_view {
+  float: right;
+  margin-top: -25px;
+}
+
+.baoming_btn {
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+  padding: 0px;
+  line-height: 25px;
+  color: #3CB371;
+  text-align: right;
+}
+
+.s_btn {
+  height: 90px;
+  background: #3CB371;
+  border-radius: 0px;
+}
+
+.weui-media-box__title {
+  font-size: 0.93555rem;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #333;
+}
+
+.weui-media-box {
+  padding: 8px 15px;
+  position: relative;
+}
+

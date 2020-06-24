@@ -1,0 +1,10 @@
+<!--pages/pay_know/pay_know.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+<view class="user_know">
+  <rich-text nodes="{{purchase_notes}}" space="nbsp"></rich-text>
+</view>
+<view class="p50">
+  <button class="detail_submit_btn" bindtap="payWechat">支付</button>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/student_card/student_card.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<!--课程列表-->
+<view>
+<view class="r_logo"> <image class="weui-media-box__thumb img_logo" src="../../images/logo.png" ></image>乐心学堂</view>
+<view class="r_title">天津海河教育园区老年大学</view>
+  <view class="weui-media-box weui-media-box_appmsg">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+      <image class="weui-media-box__thumb" src="{{user_info.head_img_url}}" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">{{user_info.last_name}}</view>
+       <view class="weui-media-box__desc">{{course_items[0].user.phone_number}}</view>
+    </view>
+  </view>
+  <block wx:for="{{course_items}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+    <view class="kecheng">
+      <view class="weui-media-box__desc">课程：<text class="kc_text">{{item.course.name}}</text></view>
+      <view class="weui-media-box__desc">教师：<text class="kc_text">{{item.course.teacher.name}}</text></view>
+      <view class="weui-media-box__desc">班级：<text class="kc_text">{{item.grade.name}}</text></view>
+      <view class="weui-media-box__desc">教室：<text class="kc_text">{{item.grade.room}}</text></view>
+    </view>
+  </block>
+</view>

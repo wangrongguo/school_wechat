@@ -1,0 +1,44 @@
+<!--pages/my/my.wxml-->
+
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+<view class="page">
+
+  <view class="page__bd">
+    <view bindtap="onHeaderOnClick" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+      <view class="weui-cell__hd" style="position: relative; margin-right: 10px;">
+        <image src="{{userInfo.head_img_url}}" class="avator_image"></image>
+      </view>
+      <view class="weui-cell__bd">
+        <view class="page__title">{{userInfo.first_name}}</view>
+        <!-- <view class="page__desc" style="font-size: 13px; color: #888;">微信号:</view>!-->
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-panel">
+      <view class="weui-panel__bd my_list_last">
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg">
+
+            <block wx:for="{{index == 0 && isAuthentication ?'':list}}" wx:key="index">
+              <view bindtap="itemViewOnClick" data-index="{{index}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                  <image src="{{item.icon}}" class="my_cell_image"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <view class="weui-cell__ft {{(index == 0 && (checkStatus == '1' || checkStatus == '2')) ?'':'weui-cell__ft_in-access'}}">
+                  <text wx:if="{{index == 0 && checkStatus == '1'}}">认证中</text>
+                  <text wx:if="{{index == 0 && checkStatus == '2'}}">已认证</text>
+                  <text wx:if="{{index == 0 && checkStatus == '0'}}">未认证</text>
+                </view>
+              </view>
+            </block>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

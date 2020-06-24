@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/course/course",
+    "pages/manage/manage",
+    "pages/my/my",
+    "pages/info/info",
+    "pages/idcard/idcard",
+    "pages/feedback/feedback",
+    "pages/integral/integral",
+    "pages/course_detail/course_detail",
+    "pages/message/message",
+    "pages/punsh_in/punsh_in",
+    "pages/course_list/course_list",
+    "pages/course_comment/course_comment",
+    "pages/news_list/news_list",
+    "pages/news_detail/news_detail",
+    "pages/course_search/course_search",
+    "pages/info_detail/info_detail",
+    "pages/msg/msg",
+    "pages/pay_know/pay_know",
+    "pages/student_card/student_card",
+    "pages/course_my/course_my"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序签到打卡"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "祺弄工作室",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#3CB371",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "iconPath": "images/course.png",
+        "selectedIconPath": "images/course_select.png",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/manage/manage",
+        "iconPath": "images/teach.png",
+        "selectedIconPath": "images/teach_select.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

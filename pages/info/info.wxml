@@ -1,0 +1,131 @@
+<!--pages/info/info.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="formSubmit">
+      <view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">姓名</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="real_name" class="weui-input" value="{{infoData.real_name}}" placeholder="请输入姓名" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">联系方式</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="phone_number" maxlength="11" type="number" class="weui-input" value="{{infoData.phone_number}}" placeholder="请输入手机号" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">身份证号</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="id_num" maxlength="18" type="number" class="weui-input" value="{{infoData.id_num}}" placeholder="请输入身份证号" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">性别</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker name="genderIndex" bindchange="bindgenderChange" value="{{genderIndex}}" range="{{gender}}">
+                <view class="weui-select weui-select_in-select-after">{{gender[genderIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">年龄</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="age" maxlength="3" type="number" class="weui-input" value="{{infoData.age}}" placeholder="请输入年龄" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">出生日期</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker name="birthday" mode="date" value="{{infoData.birthday}}" start="1900-01-01" end="2100-01-01" bindchange="bindDateChange">
+                <view class="weui-select weui-select_in-select-after">{{birthday}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">学历</view>
+            </view>
+            <view class="weui-cell__bd">
+              <picker name="educationIndex" bindchange="bindEducationChange" value="{{educationIndex}}" range="{{education}}">
+                <view class="weui-select weui-select_in-select-after">{{education[educationIndex]}}</view>
+              </picker>
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">家庭住址</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="address" class="weui-input" placeholder="请输入住址" value="{{infoData.address}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">现居住地</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="cur_address" class="weui-input" placeholder="请输入住址" value="{{infoData.cur_address}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title" style="border-top: 15px solid #f5f5f5;">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">紧急联系人</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="guardian_name" class="weui-input" placeholder="请输入紧急联系人姓名" value="{{infoData.guardian_name}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_active">
+            <view class="weui-cell__hd">
+              <view class="weui-label">联系方式</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input name="guardian_phone" class="weui-input" placeholder="请输入紧急联系人手机号" value="{{infoData.guardian_phone}}" maxlength="11" type="number" />
+            </view>
+          </view>
+        </view>
+      </view>
+      <button form-type="submit" class="submit_btn">提交修改</button>
+    </form>
+  </view>
+</view>

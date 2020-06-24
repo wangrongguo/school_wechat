@@ -1,0 +1,17 @@
+<!--pages/course_comment/course_comment.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+<form bindsubmit="bindCourseComment">
+<view class="r_view">
+  <block wx:for="{{one_2}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='/images/collect-active-select.png'></image>
+  </block>
+  <block wx:for="{{two_2}}" wx:key="index">
+    <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='/images/collect-active.png'></image>
+  </block> 
+  <textarea name="content" class="r_textarea" placeholder="请输入..."></textarea>
+</view>
+<button class="detail_submit_btn" formType="submit">提交</button>
+<view class="foot_view">{{msg}}</view>
+</form>

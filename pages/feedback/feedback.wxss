@@ -1,0 +1,21 @@
+/* pages/feedback/feedback.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.feedback_bd{
+  padding: 20px;
+}
+.weui-cells__title{
+  color: #999999;
+}
+.feedback_textarea_view{
+  border:1rpx solid #d9d9d9;
+  padding: 5px;
+}
+.feedback_submit_btn{
+  height: 45px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #33a3dc;
+  border-radius: 0;
+
+}

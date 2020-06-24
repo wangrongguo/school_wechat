@@ -1,0 +1,39 @@
+<!--pages/message/message.wxml通知-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+<view class="page">
+  <view class="page__bd">
+    <view wx:if="{{massage_data.length > 0}}" class="weui-panel">
+
+      <block wx:for="{{massage_data}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+            <view class="weui-media-box__desc_r">{{item.content}}</view>
+            <view class="weui-media-box__info">
+              <view wx:if="{{item.category == 0}}" class="weui-media-box__info__meta">学校通知</view>
+              <view wx:elif="{{item.category == 1}}" class="weui-media-box__info__meta">课程：{{item.course.name}}</view>
+              <view wx:else class="weui-media-box__info__meta">班级：{{item.grade.name}}</view>
+              <view class="weui-media-box__info__meta">{{item.created}}</view>
+
+            </view>
+          </view>
+        </view>
+      </block>
+
+
+
+    </view>
+
+    <view class="weui-loadmore weui-loadmore_line" wx:else>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+    <view wx:if="{{!isOnReachBottom}}" class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">没有更多数据</view>
+    </view>
+
+
+  </view>
+</view>

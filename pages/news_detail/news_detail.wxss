@@ -1,0 +1,9 @@
+/* pages/news_detail/news_detail.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+
+.weui-article__h1 {
+  font-size: 20px;
+  font-weight: 650;
+  margin-bottom: 0.9em;
+}

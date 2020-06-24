@@ -1,0 +1,19 @@
+/* pages/pay_know/pay_know.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.user_know{
+  padding: 0px 20px;
+}
+
+.detail_submit_btn{
+  color: #fff;
+  background-color: #33a3dc;
+}
+.button-hover{
+  color: #fff;
+  background-color: #cfcece;
+}
+
+.p50{
+  padding: 50px 50px 100px 50px;
+}

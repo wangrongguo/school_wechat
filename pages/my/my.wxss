@@ -1,0 +1,42 @@
+/* pages/my/my.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+
+.my_cell_image {
+  margin-right: 16px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.weui-cell {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.avator_image {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.my_list {
+  background-color: #d9d9d9;
+  border-top: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.my_list_last {
+  border-top: 1rpx solid #d9d9d9;
+}
+
+.weui-cell_active {
+  background-color: #ececec !important;
+}
+
+.weui-panel {
+  background-color: #fff;
+  margin-top: 0px;
+  position: relative;
+  overflow: hidden;
+}

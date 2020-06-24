@@ -1,0 +1,24 @@
+<!--pages/news_detail/news_detail.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">{{title}}</view>
+      <view class="weui-article__section">
+        <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">{{created}}</view>
+            <view class="weui-media-box__info__meta">{{category == 1 ?'政府要闻':'教学成果'}}</view>
+        </view>
+        <view class="weui-article__section" style='margin-top:30rpx;'>
+          <scroll-view scroll-y="true" style="height: auto;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+            <rich-text nodes="{{content}}" space="nbsp"></rich-text>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-searchbar": "../../weui-miniprogram/searchbar/searchbar",
+    "mp-navigation-bar": "../../weui-miniprogram/navigation-bar/navigation-bar"
+  },
+  "navigationStyle": "custom"
+}

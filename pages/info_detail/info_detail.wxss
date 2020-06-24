@@ -1,0 +1,24 @@
+/* pages/info_detail/info_detail.wxss */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.bottom_line{
+  border-bottom:1rpx solid #d9d9d9;
+
+}
+.b10{
+  border-top: 20rpx solid #d9d9d9;
+}
+.weui-label {
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 1.125rem;
+  color: #333;
+}
+.weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 1.125rem;
+  color: #666;
+}

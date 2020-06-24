@@ -1,0 +1,103 @@
+<!--pages/course_detail/course_detail.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+
+
+<view class="container">
+  <view class="page-body">
+    <!--轮播图-->
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:250px;'>
+        <swiper-item>
+          <view class="swiper-item section tc">
+            <video id="myVideo" src="{{course_detail.video.full_url}}" danmu-list enable-danmu danmu-btn controls></video>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="swiper-item">
+            <image style="width:100%;" src='{{course_detail.cover.full_url}}'></image>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+
+    <!--选项卡-->
+    <view class="swiper-tab fs20">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">简介</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">教师</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">班级</view>
+    </view>
+
+    <swiper current="{{currentTab}}" duration="300" bindchange="changeTab" style='height:{{height}}px;margin-bottom:30px;'>
+      <!--简介-->
+      <swiper-item>
+        <scroll-view scroll-y="true" style="height: {{height-5}}px;" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <!--课程简介-->
+          <view class="weui-panel__bd" style='border-bottom:7px solid rgba(0, 0, 0, 0.1);'>
+            <view class="weui-media-box weui-media-box_text">
+              <view class="weui-media-box__title weui-media-box__title_in-text">{{course_detail.name}}</view>
+              <view class="weui-media-box__desc">上课地址：{{course_detail.address.name}}</view>
+              <view class="weui-media-box__info">
+                <view class="weui-media-box__info__meta">{{course_detail.popularity}}人气</view>
+                <view class="weui-media-box__info__meta">年龄限制：{{course_detail.age_lower}}-{{course_detail.age_upper}}岁</view>
+              </view>
+              <view class="weui-media-box__info__meta price">￥{{course_detail.price}}</view>
+            </view>
+          </view>
+          <!--描述-->
+          <view class="weui-panel__bd p10">
+            <rich-text nodes="{{intro}}" space="nbsp"></rich-text>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!--教师-->
+      <swiper-item>
+        <scroll-view scroll-y="true" style="height: {{height-5}}px;" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view class="weui-panel__bd p10">
+            <rich-text nodes="{{brief}}" space="nbsp"></rich-text>
+          </view>
+        </scroll-view>
+      </swiper-item>
+      <!--其他-->
+      <swiper-item>
+        <scroll-view scroll-y="true" style="height: {{height-5}}px;" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view wx:if="{{course_detail.grades.length > 0}}" class="weui-panel">
+            <block wx:for="{{course_detail.grades}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+              <view class="weui-panel__bd" style='border-bottom:1px solid rgba(0, 0, 0, 0.1);'>
+                <view class="weui-media-box weui-media-box_text">
+                  <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+                  <view wx:if="{{item.date_range != null}}" class="weui-media-box__desc">日期：{{item.date_range == null ? '':item.date_range}}</view>
+                  <view class="weui-media-box__desc">教室：{{item.room}}</view> 
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <view wx:else class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+          </view>
+
+        </scroll-view>
+      </swiper-item>
+
+    </swiper>
+
+  </view>
+</view>
+
+<view class="page__bd page__bd_spacing detail_btn">
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder">
+        <button open-type="share" class="weui-btn detail_submit_other_btn">分享</button>
+      </view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder">
+        <button class="weui-btn detail_submit_btn" bindtap="bayCourse">立即报名</button>
+      </view>
+    </view>
+  </view>
+</view>

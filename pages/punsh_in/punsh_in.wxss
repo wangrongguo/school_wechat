@@ -1,0 +1,18 @@
+/* pages/punsh_in/punsh_in.wxss 打卡*/
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+.detail_submit_btn{
+  color: #fff;
+  background-color: #33a3dc;
+  margin:0px 20px;
+}
+.button-hover{
+  color: #fff;
+  background-color: #cfcece;
+}
+
+.foot_view{
+  font-size: 13px;
+  color: red;
+  padding: 20rpx 40rpx;
+}

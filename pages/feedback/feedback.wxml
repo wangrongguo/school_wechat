@@ -1,0 +1,19 @@
+<!--pages/feedback/feedback.wxml-->
+<!--顶部导航模板-->
+<import src="../../template/na_tabBar_template.wxml" />
+<template is="na_tabBar_template" data="{{na_tabbar}}" />
+<view class="page">
+
+  <view class="page__bd feedback_bd">
+  <form bindsubmit="bindFormSubmit">
+    <view class="feedback_textarea_view">
+        <view class="weui-cell__bd">
+
+          <textarea maxlength="200" name="textarea" class="weui-textarea" placeholder="请描述遇到的问题或意见" style="height: 8.3em" />
+          <!--<view class="weui-textarea-counter">0/200</view> -->
+        </view>
+    </view>
+    <button form-type="submit" class="feedback_submit_btn" >提交</button>
+    </form>
+  </view>
+</view>

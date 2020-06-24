@@ -1,0 +1,16 @@
+<view class="page">
+    <mp-msg type="success" title="支付成功">
+        <view slot="desc">预报名成功，请等待教务通知</view>
+        
+        <view slot="handle">
+            <button class="weui-btn detail_submit_btn" bindtap="index">返回主页</button>
+         
+        </view>
+        <view slot="footer">
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link">乐心学堂</navigator>
+            </view>
+            <view class="weui-footer__text">Copyright © 2008-2020 lexin.online</view>
+        </view>
+    </mp-msg>
+</view>

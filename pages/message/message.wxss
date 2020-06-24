@@ -1,0 +1,22 @@
+/* pages/message/message.wxss通知 */
+@import "../../style/weui.wxss";
+@import "../../app.wxss";
+
+.weui-media-box__desc_ {
+  color: #999;
+  font-size: 13px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.weui-loadmore_line {
+  border-top: 1px solid #e5e5e5;
+  margin-top: 2.4em;
+  margin-bottom: 3.4em;
+}
+
+.weui-panel__bd{
+  border-bottom: 1rpx solid #e5e5e5;
+}
